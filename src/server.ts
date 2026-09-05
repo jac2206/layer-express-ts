@@ -5,14 +5,17 @@ import healthRoutes from "./routes/health.routes";
 import v1Router from "./routes/v1/index"
 
 export const createServer = () => {
+
+  const prefix = "/layer";
+
   const app = express();
 
   app.use(express.json());
 
   app.use(scopePerRequest(container));
 
-  app.use("/", healthRoutes);
-  app.use("/v1", v1Router);
+  app.use(`${prefix}/health`, healthRoutes);
+  app.use(`${prefix}/v1`, v1Router);
 
   app.use((req, res) => {
     res.status(404).json({
