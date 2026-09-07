@@ -1,0 +1,15 @@
+model Author {
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  created_at DateTime @default(now())
+  updated_at DateTime? @updatedAt
+  created_by      String?
+  updated_by      String  ?
+  
+
+  posts Post[]
+
+  @@map("authors")
+  @@schema("layer")
+}

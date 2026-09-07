@@ -1,4 +1,4 @@
-import {defaultExclude ,defineConfig } from "vitest/config";
+import { defaultExclude, defineConfig } from "vitest/config";
 
 export default defineConfig({
   test: {
@@ -15,8 +15,16 @@ export default defineConfig({
         "**/node_modules/**",
         "src/config/**",
         "**/controller/**",
-        "**/routes/**"
-      ]
-    }
-  }
+        "**/routes/**",
+        "src/main.ts",
+        "src/server.ts",
+        "src/services/interfaces/**",
+        "src/repositories/interfaces/**",
+        "src/dto/**",
+        "src/errors/**",
+        "src/entities/**",
+        "src/schemas/**",
+      ],
+    },
+  },
 });

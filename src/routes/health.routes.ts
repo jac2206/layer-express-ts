@@ -1,6 +1,7 @@
-import { Router } from "express";
+﻿import { Router } from "express";
+
 import { container } from "../config/container";
-import { HealthController } from "../controller/health.controller";
+import { HealthController } from "../controllers/health.controller";
 
 const router = Router();
 
