@@ -1,6 +1,7 @@
-import { Router } from "express";
+﻿import { Router } from "express";
+
 import { container } from "../../config/container";
-import { GenericController } from "../../controller/v1/generic.controller";
+import { GenericController } from "../../controllers/v1/generic.controller";
 
 const router = Router();
 
@@ -17,6 +18,6 @@ router.get("/", (req, res) => {
 // router.patch("/:id", (req, res) => {
 //   const controller = container.resolve<GenericController>("genericController");
 //   controller.patchGeneric(req, res);
-// })
+// });
 
 export default router;
